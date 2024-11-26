@@ -61,14 +61,12 @@ def generate_demo_data() -> Schedule:
 
 def print_solution(schedule, score_analysis) -> None:
     LOGGER.info("")
-
     
     for shift_assignment in schedule.shift_assignments:
         employee_name = shift_assignment.employee.name
         store_name = shift_assignment.shift.store.name
         period = shift_assignment.period
         
-       
         print(employee_name + " works at " + store_name + " in period " +
             str(period) +  ".")
 
