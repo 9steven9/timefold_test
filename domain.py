@@ -33,16 +33,15 @@ class ShiftAssignment:
     employee: Employee
     shift: Annotated['Shift', PlanningVariable] = field(default=None)
 
-
     def __str__(self):
         return f'{self.name}'
-    
+
+
 @dataclass
 class Shift:
     id: Annotated[str, PlanningId]
     store: Store
     period: int
-
 
     def __str__(self):
         return f'{self.name}'
