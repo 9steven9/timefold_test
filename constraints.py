@@ -32,7 +32,6 @@ def doubly_assigned_shift_conflict(constraint_factory: ConstraintFactory) -> Con
             .as_constraint("Shift assigned more than once!"))
 
 
-
 def employee_works_store_at_most_once(constraint_factory: ConstraintFactory) -> Constraint:
     return (constraint_factory
             .for_each_unique_pair(ShiftAssignment,
